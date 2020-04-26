@@ -13,4 +13,8 @@ class User extends DataLayer
         //string "TABLE_NAME", array ["REQUIRED_FIELD_1", "REQUIRED_FIELD_2"], string "PRIMARY_KEY", bool "TIMESTAMPS"
         parent::__construct("users", ["first_name", "last_name"]);
     }
+    public function addresses()
+    {
+        return (new Address())->find("user_id = :uid", "uid=($this->id)")->fetch(true);
+    }
 }
