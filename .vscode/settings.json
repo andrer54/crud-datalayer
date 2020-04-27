@@ -1,3 +1,6 @@
 {
-    "githubPullRequests.remotes": []
+    "githubPullRequests.remotes": [
+        "origin",
+        "andrer54 / Controle-de-Estoque"
+    ]
 }
